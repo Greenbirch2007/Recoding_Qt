@@ -1,0 +1,105 @@
+前言
+
+在windows中常用　　Visual Studio作为编辑器
+
+QT实际上是一套应用程序开发类库，Qt类库由许多模块组成，如核心的GUI组件模块，QtWidget,用于数据库访问的Qt SQL模块，用于
+二维图表显示的Qt Charts模块等
+
+
+ｃ++在不同平台上移植，其编译生成的程序执行效率高，所以在研究领域很多开源的算法程序或类库都是用c++编写的，使用Ｑtc++编写应用程序，可以使用自己的应用程序具有跨平台移植的功能，也可以利用各种开源的类库资源．
+
+
+１．２　Qt的获取与安装
+
+
+1.2.1  Qt的许可类型
+
+Qt的许可类型分为商业许可和开源许可
+
+
+１．２．２　Qt的版本
+
+
+１．２．３　Qt的下载与安装
+
+
+根据开发项目的不同，Qt分为桌面和移动设备应用开发，嵌入式设备开发两大类不同的安装包
+
+桌面和移动设备应用开发就是开发在PC,服务器，手机，平板电脑等设备上运行的程序，操作系统可以是windows,linux,maxos，android等．用于桌面和移动设备应用开发的Qt具有开源许可协议，可以免费下载和使用
+
+
+嵌入式设备开发是针对具体的嵌入式设备来开发应用程序，如物联网设备，汽车电子设备，医疗设备等特定的嵌入式设备．用于嵌入式设备开发的Qt
+
+
+Qt5.9.1  有许多Qt的功能模块，包括用于不同编译器和平台的模块
+１．MinGW5.3 32bit编译器模块
+
+２．用于UWP编译的模块
+３．用于windows平台上的MSVC编译其模块
+4.用于android平台的模块，
+５．Source是Qt的源程序
+6.Qt Charts是二维图表模块
+７．Qt Data Visualization是三维数据图表模块
+8.　Qt Purchasing,Qt WebEngine,Qt Network Auth(TP)等其他模块
+９．Qt Script(Deprecated)是脚本模块，括号里的"Deprecated"表示这是已经过时的模块
+10.＂Tools＂节点是一些工具软件，博爱看
+Qt Creator 4.3.1是用于Qt程序开发的IDE
+MinGW 5.3.0是MinGW编译工具链
+Strawberry Perl是一个Perl语言工具
+qml module not found
+注意
+
+如果选择安装MSVC编译器的模块，需要在计算机上安装相应的Microsoft Visual Studio开发工具，
+
+程序组中一个主要程序是Qt Creator 4.3(Community),它是用于开发Qt程序的IDE,是Qt的主要工具软件
+
+根据选择安装的编译器模块会建立几个子分组，每个分组主要有３个工具软件
+
+１．Assistant(助手)是一个独立的查看Ｑt帮助文件的程序，集成在了Qt Creator中
+２．Designer(设计器)是一个独立的进行窗口，对话框等界面可视化设计的程序．Designer也集成在了Qt Creator中，在Qt Creator中编辑或创建界面文件时，就可以自动打开并进行界面设计
+３．Linguist是一个编辑语言资源文件的程序，在开发多语言界面的应用程序时会用到
+
+这３个工具软件可独立使用，　前两个集成到了 Qt Creator里，可在Qt Creator打开．所以Qt 的主要工具是Qt Creator，
+要编写Qt程序，运行Qt Creator即可
+
+１．３　Qt Creator初步使用
+
+1.3.1 Ｑt Creator的界面组成
+
+启动Qt Creator，主窗口
+
+Qt Creator的界面很简洁，上方是主菜单栏，左侧是主工具栏，窗口的中间部分是工作区
+
+1. ＂Projects＂按钮后，工作区显示新建项目按钮和最近打开项目的列表
+2. ＂Examples＂按钮后，工作区显示Qt自带的大量实例，选择某个实例就可以在Qt Creator中打开该项目源程序
+3."Tutorials"按钮后，工作区显示各种视频教程，查看视频教程需要联网并使用浏览器打开
+4. "Get Started Now" 按钮，工作区显示"Qt Creator Manual"帮助主题内容
+
+主窗口左侧是主工具栏，主工具栏提供了项目文件编辑，窗体设计，程序调试，项目设置等各种功能按钮
+
+１.3.2  Qt Creator的设置
+
+单击Qt Creator菜单栏的"Tools" -> "Options" 菜单项会打开选项设置对话框．对话框的左侧是可设置的内容分组，单击后右侧出现具体的设置界面，
+常用的设置包括以下几点
+１．Environment设置，在Interface页面可以设置语言和主题，为了使界面抓图更清晰，设置主题为Flat Light.更改语言和主题后需要重新启动Qt Creator才会生效
+2. Text Editor设置：在此界面可以设置文本编辑器的字体，设置各种类型文字的字体颜色，如关键字，数字，字符串，注释等字体颜色，也可以选择不同的配色主题．
+编辑器缺省字体的大小为９，可以修改得大一些
+3.Build & Run 设置：又有以下几个页面
+(1) Kits页面显示Qt Creator可用的编译工具，在图中有３个工具
+(2) Qt Versions页面显示安装的Qt版本
+(3) Compliers页面显示系统里可用的Ｃ和C＋＋编译器，由于安装了MinGW和Visual Studio2015,Qt Creator会自动检测出这些编译器
+(4) Debuggers页面显示Qt Creator自动检测到的调试器，有GNU gdb for MinGW调试器和Windows的CDB调试器
+
+
+１．４　编写一个hello world 程序
+
+１．４．１　新建一个项目
+"File" --> "New File or Project"
+
+Qt Creator可以创建多种项目，在最左侧的列表框中单击"Application",中间的列表框中列出了可以创建的应用程序的模板，各应用程序如下
+
+(1) Qt Widgets Application,支持桌面平台的有图形用户界面(Graphic User Interface, GUI)界面的应用程序.GUI的设计
+完全JI
+
+
+
