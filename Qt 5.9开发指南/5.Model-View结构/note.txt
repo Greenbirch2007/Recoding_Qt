@@ -1,0 +1,19 @@
+5.1 Model/View结构
+
+
+５．１．１　　Model/view基本原理
+
+
+５．１．２　　数据模型
+５．１．３　视图组件
+５．１．４　代理
+
+
+5.2  QFileSystemModel
+
+5.3 QStringListModel
+
+
+5.4 QStandardItemModel
+
+5.5 自定义搭理   
